@@ -57,5 +57,27 @@ public class SquareController : MonoBehaviour
             Vector2 fistPosition = new Vector2(-8, 0);
             transform.position = fistPosition;
         }
+        if (collision.gameObject.tag.Equals("RangCua"))
+        {
+            Debug.Log("Lose");
+            Vector2 fistPosition = new Vector2(-5, 3);
+            transform.position = fistPosition;
+        }
+        if (collision.gameObject.tag.Equals("CircleScenes3"))
+        {
+            Debug.Log("Lose");
+            Vector2 fistPosition = new Vector2(-5, 3);
+            transform.position = fistPosition;
+        }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("MapEdge"))
+    {
+        Debug.Log("xxxx");
+        Vector2 fistPosition = new Vector2(-9, 0);
+        transform.position = fistPosition;
+
+    }
+}
 }
